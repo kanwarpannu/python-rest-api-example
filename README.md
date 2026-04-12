@@ -1,5 +1,6 @@
 # python-rest-api-example
 
+Rest API example using FastAPI and Pydantic on Uvicorn webserver.
 The code needs Python 3.11  
 To run the code do following steps:  
 
@@ -15,5 +16,8 @@ To run the code do following steps:
 4. Start unicorn webserver to expose rest endpoint using:  
 `uvicorn main:app --reload`
 
-5. Now you can hit get endpoint `/` from local browser using url:  
+5. Now you can hit get endpoints `/` from local browser using url:  
 `localhost:8000`
+
+6. FastApi comes with Swagger UI inbuilt so it can be accessed with following url:  
+`localhost:8000/docs`
