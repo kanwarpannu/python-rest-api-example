@@ -61,3 +61,21 @@ def get_laptop_by_id(id: int):
 def add_new_phone(laptop: Laptop):
     laptops.append(laptop)
     return "Laptop Successfully added"
+
+@app.put("/laptops/{id}")
+def update_phone(id: int, laptop: Laptop):
+    for i in range(len(laptops)):
+        if laptops[i].id == id:
+            laptops[i] = laptop
+            return "Laptop updated"
+    
+    return "Laptop not found!"
+
+@app.delete("/laptops/{id}")
+def delete_phone(id: int):
+    for i in range(len(laptops)):
+        if laptops[i].id == id:
+            del laptops[i]
+            return "Laptop Deleted"
+    
+    return "Laptop not found!"
